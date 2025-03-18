@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.modelo.Empleado;
 import com.example.demo.modelo.compra;
-import com.example.demo.modelo.loginAdmin;
+
 import com.example.demo.repositorio.compraRepositorio;
 
 

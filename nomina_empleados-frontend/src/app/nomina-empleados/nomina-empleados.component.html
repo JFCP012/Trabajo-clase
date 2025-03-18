@@ -1,0 +1,28 @@
+
+<p>{{title}}</p>
+
+<table class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">Nombre</th>
+        <th scope="col">Apellidos</th>
+        <th scope="col">Cedula</th>
+        <th scope="col">Email</th>
+        <th scope="col">Empleado</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of Nomina">
+        <td>{{item.salario}}</td>
+        <td>{{item.fecha}}</td>
+        <td>{{item.ingresos}}</td>
+        <td>{{item.totalsalario}}</td>
+        <td>{{item.empleado.nombre}}{{ " "}}{{item.empleado.apellidos}}</td>
+    </tbody>
+  </table>
+
+  <button type="button" (click)="parafiscales()">Calcular parafiscales </button>
+
+  <button type="button" (click)="paafiscalesT()">Calcular parafiscales totales </button>
+
+  <button type="button" (click)="cesantias()">Calcular cesantias</button>

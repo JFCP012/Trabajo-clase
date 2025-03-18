@@ -1,0 +1,45 @@
+<div class="container mt-4">
+    <div id="ret" class="card shadow-lg p-4 mt-3 rounded-4">
+      <h2 class="text-center text-darkblue mb-4">📝 Compra</h2>
+
+        <div class="row g-3">
+         
+          <div class="col-md-6">
+            <label class="form-label fw-semibold">id Producto</label>
+            <input type="number" [(ngModel)]="C.productos" name="idP" required />
+          </div>
+          <div class="col-md-6">
+            <label class="form-label fw-semibold">cantidad</label>
+            <input type="number" [(ngModel)]="C.cantidad" name="cantidad" required />
+          </div>
+
+        <div class="text-center mt-4">
+          <button type="submit" class="btn btn-primary px-4 py-2 shadow-sm fw-bold rounded-3" (click)="compra()">
+            ✅ comprar
+          </button>
+        </div>
+    </div>
+  </div>
+
+  <div class="container mt-4">
+    <div class="table-responsive">
+      <table class="table table-hover table-bordered shadow-lg rounded">
+        <thead class="table-dark text-center">
+          <tr>
+            <th>Placa</th>
+            <th>Color</th>
+            <th>Tipo</th>
+            <th>Valor vehiculo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of compras" class="text-center align-middle table-light">
+            <td class="fw-bold text-uppercase">{{item.idCompra}}</td>
+            <td>{{item.productos}}</td>
+            <td>{{item.cantidad}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  

@@ -1,0 +1,39 @@
+<button class="btn btn-primary" (click)="abrirRegistro()" >Click</button>
+
+<div class="modal" tabindex="-1" id="registro" >
+    <div class="modal-dialog" >
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Nuevo Empleado</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" 
+          (click)="cerrarRegistro()"></button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="mb-3">
+                  <label  class="form-label">Identificación</label>
+                  <input for="inputIdentificacion" type="number" class="form-control" [(ngModel)]="Empleados.identificacion" name="identificacion">
+                  
+                </div>
+                <div class="mb-3">
+                  <label  class="form-label">Nombre</label>
+                  <input for="inputNombre" type="text" class="form-control"  [(ngModel)]="Empleados.nombre" name="nombre">
+                </div>
+                <div class="mb-3">
+                    <label  class="form-label">Apellidos</label>
+                    <input for="inputApellidos" type="text" class="form-control"  [(ngModel)]="Empleados.apellidos" name="apellidos">
+                  </div>
+                  <div class="mb-3">
+                    <label  class="form-label">Email</label>
+                    <input for="inputEmail" type="text" class="form-control"  [(ngModel)]="Empleados.email" name="email">
+                    <div id="emailHelp" class="form-text"></div>
+                  </div>  
+        <div class="modal-footer" > 
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="cerrarRegistro()">
+            Close</button>
+          <button type="submit" class="btn btn-primary" (click)="guardarRegistro()">Save changes</button>
+        </div>
+    </form>
+</div>
+      </div>    </div>
+  </div>

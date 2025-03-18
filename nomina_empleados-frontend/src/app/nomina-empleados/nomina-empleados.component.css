@@ -1,0 +1,21 @@
+button {
+    background-color: #007bff; /* Azul vibrante */
+    color: white; /* Texto en blanco */
+    border: none;
+    padding: 10px 20px;
+    margin-left: 60px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #0056b3; /* Azul más oscuro */
+    transform: scale(1.05); /* Efecto de agrandado */
+}
+
+button:active {
+    background-color: #004080; /* Azul aún más oscuro */
+    transform: scale(0.98); /* Efecto de presión */
+}
